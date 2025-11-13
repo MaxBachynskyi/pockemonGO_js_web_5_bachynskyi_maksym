@@ -41,7 +41,7 @@ $btnKick.addEventListener('click', withClickLimit(30, 'Kick', function() {
         currentEnemyIndex++;
         if (currentEnemyIndex < enemies.length) {
             const newEnemy = enemies[currentEnemyIndex];
-            addBattleLog({ firstPerson: enemy.name, customText: `${enemy.name} програв!` });
+            addBattleLog({ firstPerson: enemy.name, customText: `${enemy.name} програв 🏆!` });
             setEnemy(newEnemy);
             loadEnemy(newEnemy);
         } else {
@@ -66,7 +66,7 @@ $btnKick.addEventListener('click', withClickLimit(30, 'Kick', function() {
             if (characterIsDead) {
                 addBattleLog({
                     firstPerson: character.name,
-                    customText: `${character.name} програв 💀`,
+                    customText: `${character.name} програв ☠`,
                     remainingHP: 0,
                     maxHP: character.defaultHP
                 });
@@ -123,7 +123,7 @@ $btnHeal.addEventListener('click', withClickLimit(10, 'Heal', function() {
         if (characterIsDead) {
             addBattleLog({
                 firstPerson: character.name,
-                customText: `${character.name} програв`,
+                customText: `${character.name} програв ☠`,
                 remainingHP: 0,
                 maxHP: character.defaultHP
             });
@@ -180,7 +180,7 @@ $btnStun.addEventListener('click', withClickLimit(20, 'Stun', function() {
         currentEnemyIndex++;
         if (currentEnemyIndex < enemies.length) {
             const newEnemy = enemies[currentEnemyIndex];
-            addBattleLog({ firstPerson: enemy.name, customText: `${enemy.name} програв!` });
+            addBattleLog({ firstPerson: enemy.name, customText: `${enemy.name} програв 🏆!` });
             setEnemy(newEnemy);
             loadEnemy(newEnemy);
         } else {
@@ -203,7 +203,7 @@ $btnStun.addEventListener('click', withClickLimit(20, 'Stun', function() {
             if (characterIsDead){
                 addBattleLog({
                     firstPerson: character.name,
-                    customText: `${character.name} програв`,
+                    customText: `${character.name} програв ☠`,
                     remainingHP: 0,
                     maxHP: character.defaultHP
                 });
@@ -224,3 +224,4 @@ $btnStun.addEventListener('click', withClickLimit(20, 'Stun', function() {
         disableButtons(false);
     }, 800);
 }));
+
